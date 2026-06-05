@@ -1,11 +1,16 @@
 from flask import Flask
 import os
 
-app = Flask(__name__)   
+app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Flask working on Cloud Run 🚀"
+    return "Flask working perfectly 🚀"
+
+# Debug route (important)
+@app.route("/test")
+def test():
+    return {"status": "ok"}
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
