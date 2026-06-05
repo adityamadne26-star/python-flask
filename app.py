@@ -5,7 +5,7 @@ app = Flask(_name_)
 
 @app.route("/")
 def home():
-    return "Hello from Flask on Cloud Run"
+    return "Hello World"
 
 if _name_ == "_main_":
     port = int(os.environ.get("PORT", 8080))
