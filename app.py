@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Flask working perfectly 🚀"
+    return "Flask App Running on Cloud Run 🚀"
 
 # Debug route (important)
 @app.route("/test")
