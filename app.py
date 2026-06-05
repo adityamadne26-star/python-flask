@@ -1,10 +1,12 @@
 from flask import Flask
+import os
 
 app = Flask(_name_)
 
-@app.route('/')
+@app.route("/")
 def home():
-    return "Hello World from Flask CI/CD Pipeline"
+    return "Hello from Flask on Cloud Run"
 
 if _name_ == "_main_":
-    app.run(host="0.0.0.0", port=8080)
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
